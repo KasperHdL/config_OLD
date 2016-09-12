@@ -178,7 +178,7 @@ bar {
 }
 
 #gnome stuff 
-bindsym Mod4+l exec i3lock
+bindsym Mod4+l exec i3lock-fancy
 
 exec --no-startup-id nm-applet
 exec --no-startup-id gnome-sound-applet
