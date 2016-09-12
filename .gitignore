@@ -4,5 +4,6 @@
 !.gitignore
 !.git/
 !i3/
+!i3status/
 !keyboard_layout/
 !vim/
