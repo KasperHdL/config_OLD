@@ -1,6 +1,6 @@
 #keyboard_layout
 
-Allows åæø on [right alt]+aeo
+Allows åæø on right-alt + aeo and on right-alt + ;'[ (the original nordic positions)
 and &/~ on less/greater key(left of z)
 
 #Backup
