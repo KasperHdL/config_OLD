@@ -54,8 +54,8 @@ xkb_symbols "basic" {
     key <AB09> {	[    period,	greater		]	};
     key <AB10> {	[     slash,	question	]	};
 
-    key <BKSL> {	[ bar, asciitilde]	};
-    key <LSGT> {	[ backslash, ampersand]	};
+    key <BKSL> {	[ backslash, bar]	};
+    key <LSGT> {	[ ampersand, asciitilde]	};
 
     include "level3(ralt_switch)"
 };
