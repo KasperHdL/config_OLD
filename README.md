@@ -1,5 +1,5 @@
 #config
-##for most stuff but not vim
+for most stuff but not vim
 
 * i3
   * i3-lock-fancy
