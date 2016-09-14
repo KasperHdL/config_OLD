@@ -28,6 +28,8 @@ font pango:monospace 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+workspace_auto_back_and_forth yes
+
 
 # start a terminal
 bindsym $mod+Return exec gnome-terminal
@@ -183,6 +185,7 @@ bindsym Mod4+l exec i3lock-fancy
 exec --no-startup-id nm-applet
 exec --no-startup-id gnome-sound-applet
 exec --no-startup-id gnome-settings-daemon
+exec --no-startup-id ~/.config/i3/load_layout.sh
 
 
 set $audio-sink-select Audio Sink (a) analog (u) usb-headset (c) combined
