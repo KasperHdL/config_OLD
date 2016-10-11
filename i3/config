@@ -37,20 +37,6 @@ bindsym $mod+Return exec terminology
 # kill focused window
 bindsym $mod+q kill
 
-bar {
-  status_command i3status
-  colors {
-    separator #666666
-    background #222222
-    statusline #DDDDDD
-    focused_workspace #d70a53 #d70a53 #ffffff
-    active_workspace #333333 #333333 #888888
-    inactive_workspace #333333 #333333 #888888
-    urgent_workspace #eb709b #eb709b #ffffff
-  }
-}
-
-
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
 bindsym $mod+space exec --no-startup-id rofi -show run
