@@ -37,12 +37,25 @@ bindsym $mod+Return exec terminology
 # kill focused window
 bindsym $mod+q kill
 
+bar {
+  status_command i3status
+  colors {
+    separator #666666
+    background #222222
+    statusline #DDDDDD
+    focused_workspace #d70a53 #d70a53 #ffffff
+    active_workspace #333333 #333333 #888888
+    inactive_workspace #333333 #333333 #888888
+    urgent_workspace #eb709b #eb709b #ffffff
+  }
+}
+
+
 # start dmenu (a program launcher)
-# bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
+#bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
+bindsym $mod+space exec --no-startup-id rofi -show run
+bindsym $mod+Tab exec --no-startup-id rofi -show window
+
 
 # change focus
 bindsym $mod+h focus left
@@ -71,8 +84,6 @@ bindsym $mod+Shift+Right move right
 # split in horizontal orientation
 bindsym $mod+Shift+v split h
 
-#test
-
 # split in vertical orientation
 bindsym $mod+v split v
 
@@ -80,18 +91,18 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+w floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+w focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 # switch to workspace
