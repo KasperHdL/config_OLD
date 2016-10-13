@@ -33,7 +33,7 @@ workspace_auto_back_and_forth yes
 
 
 new_window pixel 4
-new_float pixel 4
+new_float pixel 8
 
 set $default_gaps_inner 12
 set $default_gaps_outer 0
@@ -45,13 +45,18 @@ bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+q kill
+bindsym $mod+Shift+q exec "termite --name=_xkill_ -e xkill" 
+for_window [instance="_xkill_"] floating enable, move absolute position 660 0, resize set 600 60
+
+bindsym $mod+Shift+t exec --no-startup-id termite --name=_todo_ -e "vim '+set nofen' ${HOME}/.todo"
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
 bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+space exec --no-startup-id rofi -show run
 
-bindsym $mod+Tab exec --no-startup-id rofi -show window
+bindsym $mod+Shift+d exec --no-startup-id rofi -show window
+bindsym $mod+Shift+space exec --no-startup-id rofi -show window
 
 
 # change focus
