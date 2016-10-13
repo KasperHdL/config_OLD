@@ -43,6 +43,9 @@ gaps outer $default_gaps_outer
 # start a terminal
 bindsym $mod+Return exec termite
 
+# toggle touchpad
+bindsym $mod+Alt_R exec --no-startup-id "synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')"
+
 # kill focused window
 bindsym $mod+q kill
 bindsym $mod+Shift+q exec "termite --name=_xkill_ -e xkill" 
