@@ -234,11 +234,6 @@ mode "$audio-sink-select"{
 
 bindsym $mod+Shift+a mode "$audio-sink-select"
 
-#workspace
-assign [class="spotify-adkiller.sh"] $workspace8
-assign [class="discord"] $workspace9
-assign [class="geary"] $workspace10
-
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume

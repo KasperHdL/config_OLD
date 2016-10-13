@@ -8,5 +8,5 @@ i3-msg "workspace 2; append_layout ~/.config/i3/workspace_empty.json"
 # And finally we fill the containers with the programs they had
 (brave &)
 (corebird &)
-(discord &)
+(discord-canary &)
 (geary &)
