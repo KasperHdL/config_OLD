@@ -213,6 +213,10 @@ bar {
   }
 }
 
+
+assign [class="(?i)Discord"] 9
+#assign [class="^Spotify$"] 8 does not work for some reason
+
 #gnome stuff 
 bindsym Mod4+l exec i3lock-fancy
 
@@ -234,7 +238,6 @@ mode "$audio-sink-select"{
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-
 bindsym $mod+Shift+a mode "$audio-sink-select"
 
 # Pulse Audio controls
@@ -242,11 +245,18 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 
+# spotify controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioStop exec playerctl stop
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioNext exec playerctl next
+
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
-client.focused #d70a53 #d70a53 #ffffff #8c0333
-client.focused_inactive #333333 #333333 #888888 #333333
+# theme
+client.focused #d70a53 #d70a53 #ffffff #8c0333 
+client.focused_inactive #333333 #333333 #888888 #333333 
 client.unfocused #333333 #333333 #888888 #333333
 client.urgent #eb709b #eb709b #ffffff #eb709b
