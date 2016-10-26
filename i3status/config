@@ -59,7 +59,7 @@ cpu_usage {
 }
 
 disk "/" {
-        format = "%avail / %total"
+        format = "%used / %total"
 }
 
 volume master {
