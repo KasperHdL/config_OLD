@@ -71,12 +71,6 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
 ##
 # move floating windows with keys
 set $mode_move Moving windows
@@ -218,7 +212,8 @@ bar {
 
 
 assign [class="(?i)Discord"] 9
-#assign [class="^Spotify$"] 8 does not work for some reason
+#Does not work...
+assign [class="(?i)Spotify"] 8
 
 #gnome stuff 
 bindsym Mod4+l exec i3lock-fancy
@@ -253,6 +248,11 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioStop exec playerctl stop
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioNext exec playerctl next
+
+bindsym $mod+Left  exec playerctl previous
+bindsym $mod+Right exec playerctl next
+bindsym $mod+Down  exec playerctl stop
+bindsym $mod+Up    exec playerctl play-pause
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
