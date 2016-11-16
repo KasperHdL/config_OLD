@@ -1,4 +1,7 @@
-#config
+##DO NOT USE
+only here to be able to backtrack, look at my .config instead.
+
+#config OLD
 for most stuff but not vim
 
 * i3
